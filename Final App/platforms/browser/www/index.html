@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+<link href="css/jquery.mobile-1.3.0.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.3.0.js" ></script>
+    <title>Non Profit Co</title>
+</head>
+
+<body>
+    <div class="app">
+        <div id="deviceready" class="blink">
+            <p class="event listening"></p>
+            <p class="event received"></p>
+        </div>
+    </div>
+
+   
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage1"></meter>
+	</div>
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home" class="ui-btn-active">Home</a></li>
+		   <li><a href="#page2">About</a></li>
+		   <li><a href="#page3">Join</a></li>
+		   <li><a href="#page4">Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+
+	<img src="images/hero1.png" alt="technology hands" class="heroimg">
+
+   <button onclick="vibrateDevice()">Vibrate!</button>
+
+	<p>Here at Non-Profit Co. we believe technology can improve the lives everywhere. Click a link below to learn more about how technology is helping people, or click the join or donate button above to find out how you can contribute.</p>
+
+	<a href="#automation"><img src="images/info1.png" alt="automation" class="infoimg"></a>
+	<a href="#privacy"><img src="images/info2.png" alt="privacy" class="infoimg"></a>
+	<a href="#cloud"><img src="images/info3.png" alt="cloud" class="infoimg"></a>
+	<a href="#service"><img src="images/info4.png" alt="service" class="infoimg"></a>
+
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage2"></meter>
+	</div>
+
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home" >Home</a></li>
+		   <li><a href="#page2" class="ui-btn-active">About</a></li>
+		   <li><a href="#page3">Join</a></li>
+		   <li><a href="#page4">Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+
+	<img src="images/abouthero.png" alt="members picture" class="heroimg">
+
+	<p>We believe we have the best group of members around. Join us to join our list of awesome people that makes this all happen. See some of our contributing members below.</p>
+
+	<a href="#memberlist" data-rel="dialog" data-role="button">Member List</a>
+
+	<h1>Frequently Asked Questions</h1>
+
+
+	<div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+		<div data-role="collapsible">
+		    <h3>What is Non Profit Co?</h3>
+		        <p>We are an organization created to help advance technology for the betterment of people everywhere. We help local communities and grassroots groups push policy that protects things like Net Neutrality.</p>
+		</div>
+		<div data-role="collapsible">
+		   <h3>How are you different?</h3>
+		        <p>We focus specifically on technology. There aren't many Non-profit organizations around that focus exclusively on technology and its potential to improve lives.</p>
+		</div>
+		<div data-role="collapsible">
+		    <h3>Do you hire?</h3>
+		        <p>You can check out our Join page to see how you can help contribute. If there is a great need for a specific role we do offer positions from time to time.</p>
+		</div>
+		<div data-role="collapsible">
+		    <h3>Why focus on technology?</h3>
+		        <p>We are passionate about all kinds of technology, so it is easier to push for. It's what we're good at!</p>
+		</div>
+	</div>
+
+
+
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage3"></meter>
+	</div>
+
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home" >Home</a></li>
+		   <li><a href="#page2">About</a></li>
+		   <li><a href="#page3" class="ui-btn-active">Join</a></li>
+		   <li><a href="#page4">Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+
+	<img src="images/joinhero.png" alt="pen and signup form" class="heroimg">
+
+	<h1>Registration</h1>
+
+	<form>
+
+	<label for="text-basic">First Name</label>
+	<input type="text" name="text-basic" id="text-basic" value="">
+
+	<label for="text-basic">Last Name</label>
+	<input type="text" name="text-basic" id="text-basic" value="">
+
+	<label for="tel">Phone Number</label>
+	<input type="tel" name="tel" id="tel" value="">
+
+	<label for="text-basic">Email</label>
+	<input type="text" name="text-basic" id="text-basic" value="">
+
+
+	    <label for="flip-1">Are you willing to travel:</label>
+	    <select name="flip-1" id="flip-1" data-role="slider">
+	        <option value="no">No</option>
+	        <option value="yes">Yes</option>
+	    </select>
+		<a href="#thanks" data-role="button" data-theme="b">Submit</a>
+	</form>
+
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage4"></meter>
+	</div>
+
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home" >Home</a></li>
+		   <li><a href="#page2">About</a></li>
+		   <li><a href="#page3">Join</a></li>
+		   <li><a href="#page4" class="ui-btn-active">Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+	<img src="images/donatehero.png" alt="hands holding" class="heroimg">
+
+	<blockquote>“It’s not how much we give but how much love we put into giving.”<br><br>
+			― Mother Teresa</blockquote>
+
+	<p>Donating is one of the easiest and most effective ways to help today. The assistance your donation provides is immediate and powerful. Paying our writers who pour hours upon hours into the amazing articles we provide, working with local groups to affect change in governmental policy to protect Net Neutrality and Encryption, and keeping up with the latest digital trends, all take money and time. With your donation we can keep the lights on and continue pushing towards a secure digital future for everyone.</p>
+
+	<p>	If you like what we do and provide, help us keep our lights on by donating today. If you’d like to contribute in other ways hi the volunteer link below to help us out. Thanks!</p>
+
+		<a href="#page3" data-role="button" data-theme="b">DONATE</a>
+		<a href="#page3" data-role="button" data-theme="b">VOLUNTEER</a>
+
+	<img src="images/donatehero2.png" alt="hands held up" class="heroimg">
+
+	<p>Short on time and money? That’s okay, we understand. Everyone can help contribute to the work we do by influencing your local community, family, and friends. We’ve collected some information that you can share that will help raise awareness of key issues we are working on. Knowledge is power, and the more people that know, the more progress we can make towards a secure digital future for everyone.</p>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/K_JomGpvjH4" frameborder="0" allowfullscreen></iframe>
+
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+</div>
+
+<div data-role="page" id="memberlist" data-theme="e">
+	<div data-role="header" data-theme="d">
+			<h1>Member List</h1>
+	</div>
+
+	<img src="images/memberlist.png" alt="list of members" class="heroimg">
+
+</div>
+
+<div data-role="page" id="thanks">
+
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage5"></meter>
+	</div>
+
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home" >Home</a></li>
+		   <li><a href="#page2">About</a></li>
+		   <li><a href="#page3">Join</a></li>
+		   <li><a href="#page4" >Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+	<h1>Thanks!</h1>
+	<p>You will recieve an email with more information shortly. Thanks for joining!</p>
+
+	</div>
+
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="privacy">
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage6"></meter>
+	</div>
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home">Home</a></li>
+		   <li><a href="#page2">About</a></li>
+		   <li><a href="#page3">Join</a></li>
+		   <li><a href="#page4">Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+
+	<img src="images/newshero1.png" alt="key locks" class="heroimg">
+
+	<p>Privacy in the age of the Internet is a new challenge that previous generations did not need to address. From sharing what you ate for lunch on Instagram, to vacation photos posted on Facebook, privacy in the digital age is a legitimate concern. Anything posted on the Internet has the potential to be permanent (and most often is). Company privacy policies can be pages long to read in obscure legalese, dictating how and when they might share your information with others.</p>
+
+	<p>	How does one keep a level of privacy in todays modern day information frenzy? We’ll show you the best ways to protect yourself and your privacy on the rapidly changing landscape of the 0’s and 1’s.</p>
+
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="service">
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage7"></meter>
+	</div>
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home">Home</a></li>
+		   <li><a href="#page2">About</a></li>
+		   <li><a href="#page3">Join</a></li>
+		   <li><a href="#page4">Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+
+	<img src="images/newshero2.png" alt="VPN Diagram" class="heroimg">
+
+	<p>Coffee and free public WiFi, what could be better? Unfortunately the guest sniffing your un-encrypted traffic is thinking the same thing. The proliferation of Internet access through WiFi connections is amazing and has changed life, but sometimes not always for the better. Doing your banking while sipping a latte might be convenient, but it opens a giant security hole for anyone with the know-how to step right through.</p>
+
+	<p>	Keep the convenience of public WiFi anywhere by adding security easily to any device. With a VPN, we’ll show you how to protect yourself no matter what Internet connection you are using.</p>
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+</div>
+
+<div data-role="page" id="automation">
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage8"></meter>
+	</div>
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home">Home</a></li>
+		   <li><a href="#page2">About</a></li>
+		   <li><a href="#page3">Join</a></li>
+		   <li><a href="#page4">Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+
+	<img src="images/automationhero.png" alt="key locks" class="heroimg">
+
+	<p>Automation is an amazing thing. It has the potential to increase output of industry by an incredible amount. Robots that continue to work and produce, even on holidays and weekends.</p>
+
+	<p>For some, this can be a scary idea. For some it means being replaced. However, robots will always need engineers and technicians to continue doing what we do. There will always be need for developing and improving the technology, and jobs that go along with that.</p>
+
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+</div>
+
+
+
+<div data-role="page" id="cloud">
+	<div data-role="header">
+		<h1>Non Profit Co</h1>
+			<meter class="batteryMeter" value="99" max="100" id="batteryPage9"></meter>
+	</div>
+	<div data-role="navbar" class="ui-state-persist" data-grid="c">
+		<ul>
+		   <li><a href="#home">Home</a></li>
+		   <li><a href="#page2">About</a></li>
+		   <li><a href="#page3">Join</a></li>
+		   <li><a href="#page4">Donate</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+
+	<img src="images/cloudhero.png" alt="key locks" class="heroimg">
+
+	<p>Cloud based services are all the rage, and it makes sense why. What better way to ensure redundnacy, reliability, and uptime, than to offload your services to a cloud based solution?</p>
+
+	<p>Cloud computing is one way that technology is helping everyone's lives improve. Whether you build the service, maintain it, or just use it, cloud services impact our lives every day, most of the time without us knowing it. See how cloud based computing can help you.</p>
+
+		<div data-role="footer" data-position="fixed">
+		<h4>Non Profit Co &copy; 2017</h4>
+	</div>
+</div>
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
